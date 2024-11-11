@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: demo_user_service
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+        - host.docker.internal:8000
+  - job_name: demo_user_service_docker
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - api:8000
+  - job_name: demo_user_service_docker_db
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - db:5656
+  - job_name: demo_user_service_docker_cache
+    static_configs:
+      - targets:
+        - cache-exporter:9121

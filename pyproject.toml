@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "demo-user-service"
+version = "0.1.0"
+description = ""
+authors = ["Ilya Katun <i.katun@tinkoff.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.3"
+uvicorn = "^0.32.0"
+pydantic = "^2.9.2"
+pydantic-settings = "^2.6.0"
+edgedb = "^2.1.0"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+bcrypt = "^4.2.0"
+redis = "^5.2.0"
+cryptography = "^43.0.3"
+python-multipart = "^0.0.16"
+prometheus-fastapi-instrumentator = "^7.0.0"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
